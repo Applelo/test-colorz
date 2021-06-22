@@ -1,4 +1,6 @@
 @include b('wrapper') {
   max-width: 1170px;
-  color: color-get('white');
+  background-color: color-get('white');
+  min-height: 100vh;
+  margin: 0 auto;
 }

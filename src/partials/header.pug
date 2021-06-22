@@ -1,1 +1,18 @@
 +b('header', 'header')
+  +e('header', 'burger', 'button')(
+    aria-label='Accéder au menu principal'
+    class='lg:hidden'
+  )
+
+  +e('header', 'logo', 'a')(href='#')
+    h1.is-hidden= "Sollic"
+    p!= "Etiam porta sem malesuada magna mollis euismod."
+
+  +e('header', 'nav', 'nav')
+    h2.is-hidden= "Menu Principal"
+    +e('header', 'list', 'ul')
+      each name in ['Cras', 'Quam', 'Mattis', 'Cras', 'Etiam', 'Pharetra']
+        +e('header', 'list-item', 'li')
+          a(href='#')!= name
+
+  +e('header', 'search', 'button')(aria-label='Recherche')

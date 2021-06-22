@@ -1,0 +1,5 @@
+@mixin bp($name) {
+  @include breakpoint(map-get($breakpoints, $name)) {
+    @content;
+  }
+}

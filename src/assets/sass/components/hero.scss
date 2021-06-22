@@ -1,0 +1,42 @@
+@include b('hero') {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 350px;
+  padding: $gutter;
+  position: relative;
+  overflow: hidden;
+
+  @include bp('md') {
+    height: 580px;
+    align-items: flex-start;
+    padding: $gutter #{span(1, 12, $gutter, $margin: true)};
+  }
+
+  @include e('img') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    max-width: none;
+
+    @include bp('md') {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+    }
+  }
+
+  @include e('title') {
+    color: color-get('white');
+    z-index: 1;
+  }
+
+  @include e('button') {
+    z-index: 1;
+    margin-top: 27px;
+  }
+}

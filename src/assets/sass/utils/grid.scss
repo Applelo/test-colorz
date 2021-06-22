@@ -1,0 +1,33 @@
+////
+/// Outputs a CSS calc value that represents the width of a grid span
+///
+/// @param {Number} $span - Number of columns to span
+/// @param {Number} $total - Total number of columns in the grid
+/// @param {Number} $gap - Size of the grid gutter expressed in pixels
+/// @param {Bool} $negative - Use `true` to output a negative value
+/// @param {Bool} $margin - Use `true` to add an external gutter to the outputed value
+///
+/// @return {Number} - Width of span represented by a CSS calc
+////
+@function span($span, $total, $gap: $gutter, $negative: false, $margin: false) {
+  $gap-multiplier: ($span - 1);
+  $gap-eq: $gap * $gap-multiplier;
+
+  @if (type-of($margin) == 'string') {
+    $gap-eq: $margin;
+  } @else if ($margin) {
+    $gap-multiplier: $span;
+    $gap-eq: $gap * $gap-multiplier;
+  }
+
+  @if ($negative) {
+    @return calc(
+      (((100% - #{$gap * ($total - 1)}) / #{$total}) * #{$span} + #{$gap-eq}) *
+        -1
+    );
+  } @else {
+    @return calc(
+      ((100% - #{$gap * ($total - 1)}) / #{$total}) * #{$span} + #{$gap-eq}
+    );
+  }
+}

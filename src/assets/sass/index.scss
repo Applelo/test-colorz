@@ -5,8 +5,7 @@
 @import 'sanitize.css';
 @import 'breakpoint-sass/stylesheets/_breakpoint.scss';
 
-//config
-@import 'config/colors.scss';
+@import 'setup';
 
 //utils
 @import 'utils/all.scss';

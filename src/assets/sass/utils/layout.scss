@@ -1,0 +1,33 @@
+.link-stretch {
+  height: auto;
+  position: relative;
+
+  a {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+////
+/// Adds declarations to a CSS declaration block to apply an SEO-friendly alternative to diplay:none
+////
+@mixin hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.is-hidden {
+  @include hidden;
+}
