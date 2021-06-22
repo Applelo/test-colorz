@@ -21,6 +21,7 @@
     "@prettier/plugin-pug": "^1.15.3",
     "@principalstudio/principal-purgecss-extractor": "^1.0.6",
     "autoprefixer": "^10.2.6",
+    "breakpoint-sass": "^2.7.1",
     "parcel": "^2.0.0-beta.3.1",
     "postcss": "^8.3.5",
     "postcss-custom-properties": "^11.0.0",

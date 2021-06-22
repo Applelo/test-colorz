@@ -4,8 +4,14 @@ doctype html
 html(lang='fr')
   head
     meta(charset='utf-8')
-    title= "Titre de la page"
-    link(rel='stylesheet', href='./assets/sass/index.scss')
+    title= "Sollic - Accueil"
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(
+      href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap'
+      rel='stylesheet'
+    )
+    link(rel='stylesheet' href='./assets/sass/index.scss')
   body
     include ./partials/header.pug
     include ./partials/hero.pug
