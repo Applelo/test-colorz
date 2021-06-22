@@ -1,0 +1,13 @@
+include ./mixins/bem.pug
+
+doctype html
+html(lang='fr')
+  head
+    meta(charset='utf-8')
+    title= "Titre de la page"
+    link(rel='stylesheet', href='./assets/sass/index.scss')
+  body
+    include ./partials/header.pug
+    include ./partials/hero.pug
+    include ./partials/footer.pug
+    script(src='./assets/ts/index.ts')
