@@ -4,3 +4,16 @@
 @import 'normalize.css';
 @import 'sanitize.css';
 @import 'breakpoint-sass/stylesheets/_breakpoint.scss';
+
+//config
+@import 'config/colors.scss';
+
+//utils
+@import 'utils/all.scss';
+
+//base
+@import 'typography';
+@import 'base';
+
+//components
+@import 'components/all';

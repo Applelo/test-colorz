@@ -13,7 +13,8 @@ html(lang='fr')
     )
     link(rel='stylesheet' href='./assets/sass/index.scss')
   body
-    include ./partials/header.pug
-    include ./partials/hero.pug
-    include ./partials/footer.pug
+    +b('wrapper')
+      include ./partials/header.pug
+      include ./partials/hero.pug
+      include ./partials/footer.pug
     script(src='./assets/ts/index.ts')
