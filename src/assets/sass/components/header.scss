@@ -2,7 +2,6 @@
   display: flex;
   padding: 60px $gutter 14px;
   align-items: center;
-  justify-content: space-between;
   height: $header-height;
 
   @include bp('md') {
@@ -19,29 +18,18 @@
       size: contain;
       repeat: no-repeat;
     }
+    margin-right: auto;
   }
 
   @include e('logo') {
     margin: 0 $gutter;
-    text-align: center;
-    color: color-get('boulder');
 
-    @include bp('md') {
-      text-align: left;
+    @include bp('0-to-lg') {
+      width: 145px;
     }
 
-    &::before {
-      display: inline-block;
-      width: 96px;
-      height: 27px;
-      content: '';
-      background: {
-        image: url('./../img/svg/logo.svg');
-        position: center;
-        size: contain;
-        repeat: no-repeat;
-      }
-      margin-bottom: 8px;
+    @include bp('lg') {
+      margin: 0 auto 0 0;
     }
   }
 
@@ -55,8 +43,9 @@
       size: contain;
       repeat: no-repeat;
     }
+    margin-left: auto;
 
-    @include bp('md') {
+    @include bp('lg') {
       width: 16px;
       height: 16px;
     }
