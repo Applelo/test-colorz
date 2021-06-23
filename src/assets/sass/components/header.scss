@@ -59,6 +59,10 @@
     @include bp('0-to-lg') {
       @include hidden;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   @include e('list-item') {
