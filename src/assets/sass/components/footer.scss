@@ -1,0 +1,56 @@
+@include b('footer') {
+  display: grid;
+  background-color: color-get('black');
+  color: color-get('white');
+  padding: 50px $gutter 88px;
+  gap: $gutter;
+  grid-template-areas:
+    'a a a a a a a a a a a a'
+    'b b b b b b b b b b b b'
+    'c c c c c c c c c c c c';
+
+  @include bp('lg') {
+    grid-template-areas:
+      'a a a a b b b b b b b b'
+      'c c c c c c c c c c c c';
+    padding: 40px $gutter;
+  }
+
+  @include e('logo') {
+    grid-area: a;
+    justify-self: center;
+    align-self: center;
+  }
+
+  @include e('nav') {
+    grid-area: b;
+  }
+
+  @include e('list') {
+    margin: 6px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: $gutter;
+
+    @include bp('lg') {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0;
+    }
+  }
+
+  @include e('list-item') {
+    & > span {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include e('copyright') {
+    grid-area: c;
+    width: 100%;
+    border-top: 1px solid color-get('dove-grey');
+    padding-top: 18px;
+  }
+}

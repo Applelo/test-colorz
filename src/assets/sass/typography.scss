@@ -1,5 +1,9 @@
 $font-family: 'Roboto', sans-serif;
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
+  color: color-get('black');
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
 }

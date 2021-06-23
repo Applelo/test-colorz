@@ -1,0 +1,67 @@
+@include b('header') {
+  display: flex;
+  padding: 60px $gutter 14px;
+  align-items: center;
+  height: $header-height;
+
+  @include bp('md') {
+    padding: 0 $gutter;
+  }
+
+  @include e('burger') {
+    flex-shrink: 0;
+    width: 36px;
+    height: 26px;
+    background: {
+      image: url('./../img/svg/burger.svg');
+      position: center;
+      size: contain;
+      repeat: no-repeat;
+    }
+    margin-right: auto;
+  }
+
+  @include e('logo') {
+    margin: 0 $gutter;
+
+    @include bp('0-to-lg') {
+      width: 145px;
+    }
+
+    @include bp('lg') {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  @include e('search') {
+    flex-shrink: 0;
+    width: 27px;
+    height: 26px;
+    background: {
+      image: url('./../img/svg/search.svg');
+      position: center;
+      size: contain;
+      repeat: no-repeat;
+    }
+    margin-left: auto;
+
+    @include bp('lg') {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  @include e('list') {
+    display: flex;
+
+    @include bp('0-to-lg') {
+      @include hidden;
+    }
+  }
+
+  @include e('list-item') {
+    &:not(:last-child) {
+      margin-right: $gutter;
+    }
+  }
+}

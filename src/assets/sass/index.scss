@@ -1,6 +1,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import 'normalize.css';
-@import 'sanitize.css';
 @import 'breakpoint-sass/stylesheets/_breakpoint.scss';
+
+@import 'setup';
+
+//utils
+@import 'utils/all.scss';
+
+//base
+@import 'typography';
+@import 'base';
+
+//components
+@import 'components/all';

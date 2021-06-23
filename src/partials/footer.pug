@@ -1,1 +1,16 @@
 +b('footer', 'footer')
+  +e('footer', 'logo')
+    +b('logo', 'a', ['footer'])(href='#')
+      span.is-hidden= "Sollic"
+      p!= "Etiam porta sem malesuada magna mollis euismod."
+
+  +e('footer', 'nav', 'nav')
+    +e('footer', 'list', 'ul')
+      each i in [0,1,2,3]
+        +e('footer', 'list-item', 'li')
+          span!= "TRISTIQUE"
+          +e('footer', 'sublist', 'ul')
+            each text in ['Cras justo odio', 'Dapibus ac facilisis', 'Egestas eget ', 'Maecenas faucibus', 'Mollis interdum', 'raesent commodo', 'Cursus magna']
+              +e('footer', 'sublist-item', 'li')!= text
+
+  +e('footer', 'copyright', 'p')!= "Sollic © 2016"
