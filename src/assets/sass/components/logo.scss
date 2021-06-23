@@ -32,4 +32,12 @@
       background-image: url('./../img/svg/logo-footer.svg');
     }
   }
+
+  @include e('slogan') {
+    @include typography-setup(12px, 14px);
+
+    @include bp('lg') {
+      @include typography-setup(12px, 22px);
+    }
+  }
 }

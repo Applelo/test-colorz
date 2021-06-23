@@ -6,4 +6,6 @@
   height: 37px;
   border-radius: 19px;
   background-color: color-get('white');
+  @include typography-setup(14px, 14px);
+  font-weight: $font-weight-bold;
 }

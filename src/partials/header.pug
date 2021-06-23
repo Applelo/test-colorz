@@ -5,9 +5,7 @@
   )
 
   +e('header', 'logo')
-    +b('logo', 'a', ['header'])(href='#')
-      h1.is-hidden= "Sollic"
-      p!= "Etiam porta sem malesuada magna mollis euismod."
+    +logo('header')
 
   +e('header', 'nav', 'nav')
     h2.is-hidden= "Menu Principal"

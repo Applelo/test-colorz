@@ -1,0 +1,11 @@
+$font-family: 'Roboto', sans-serif;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+
+body {
+  color: color-get('black');
+  font-family: $font-family;
+  font-weight: 400;
+  @include typography-setup(14px, 22px);
+}

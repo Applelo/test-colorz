@@ -4,6 +4,7 @@
   color: color-get('white');
   padding: 50px $gutter 88px;
   gap: $gutter;
+  @include typography-setup(11px, 18px);
   grid-template-areas:
     'a a a a a a a a a a a a'
     'b b b b b b b b b b b b'
@@ -44,6 +45,8 @@
       display: block;
       text-transform: uppercase;
       margin-bottom: 20px;
+      @include typography-setup(14px, 18px);
+      font-weight: $font-weight-medium;
     }
   }
 

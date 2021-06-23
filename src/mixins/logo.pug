@@ -1,0 +1,5 @@
+mixin logo(md)
+  +b('logo', 'a', md)(href='#')
+    if md === 'header'
+      h1.is-hidden= "Sollic"
+    +e('logo', 'slogan', 'p')!= "Etiam porta sem malesuada magna mollis euismod."

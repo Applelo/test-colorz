@@ -4,7 +4,7 @@
   align-items: center;
   height: $header-height;
 
-  @include bp('md') {
+  @include bp('lg') {
     padding: 0 $gutter;
   }
 
@@ -53,6 +53,8 @@
 
   @include e('list') {
     display: flex;
+    text-transform: uppercase;
+    @include typography-setup(16px, 22px);
 
     @include bp('0-to-lg') {
       @include hidden;

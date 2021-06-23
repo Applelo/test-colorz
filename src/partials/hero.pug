@@ -1,4 +1,15 @@
 +b('hero', 'article')
   +e('hero', 'img', 'img')(src='assets/img/paris.jpg')
-  +e('hero', 'title', 'h2')!= "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+  +e('hero', 'title', 'h2')
+    | Cras justo odio,
+    br
+    | dapibus
+    span
+      |
+      | ac facilisis
+      |
+    br
+    | in, egestas eget
+    br
+    | quam.
   +b('button', 'a').hero__button!= "Nullam Vulputate Tortor"
