@@ -2,7 +2,8 @@
 
 # test-colorz
 
-Frond end test for Colorz company. [See this page lives](https://lois-boubault-test-colorz.netlify.app/)
+Frond end test for Colorz company. [See this page lives](https://lois-boubault-test-colorz.netlify.app/).
+
 This page uses Parcel for compilation.
 
 ## Command
