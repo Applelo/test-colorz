@@ -1,9 +1,21 @@
 @include b('summary') {
+  @include m('big') {
+    @include bp('lg') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $gutter;
+    }
+  }
+
   @include e('img-container') {
-    width: 100%;
-    padding-bottom: 100%;
-    height: 0;
     position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+
+    @include bp('lg') {
+      padding-bottom: 74%;
+    }
   }
 
   @include e('img') {
@@ -13,6 +25,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include e('content') {
+    align-self: flex-end;
   }
 
   @include e('top') {

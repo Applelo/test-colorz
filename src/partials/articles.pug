@@ -1,4 +1,9 @@
 +b('articles', 'ul')
-  each img in ['assets/img/coffee.jpg', 'assets/img/sea.jpg', 'assets/img/etreta.jpg', 'assets/img/hidding-man.jpg', 'assets/img/pepper.jpg', 'assets/img/train.jpg']
-    li
-      +summary(img)
+  each img, index in ['assets/img/coffee.jpg', 'assets/img/sea.jpg', 'assets/img/etreta.jpg', 'assets/img/hidding-man.jpg', 'assets/img/pepper.jpg', 'assets/img/train.jpg']
+    - let md = null;
+
+    if index === 0
+      - md = "big";
+
+    +e('articles', 'item', 'li')
+      +summary(img, md)

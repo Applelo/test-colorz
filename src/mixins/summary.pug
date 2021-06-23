@@ -1,9 +1,10 @@
-mixin summary(img)
-  +b('summary', 'article')
+mixin summary(img, md)
+  +b('summary', 'article', md)
     +e('summary', 'img-container')
       +e('summary', 'img', 'img')(src=img)
-    +e('summary', 'top')
-      +e('summary', 'cat', 'p')!= "Design"
-      +e('summary', 'title', 'h2')!= "Venenatis Ullamcorper"
-      +e('summary', 'date', 'p')!= "29 avril 2015"
-    +e('summary', 'text', 'p')!= "Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum."
+    +e('summary', 'content')
+      +e('summary', 'top')
+        +e('summary', 'cat', 'p')!= "Design"
+        +e('summary', 'title', 'h2')!= "Venenatis Ullamcorper"
+        +e('summary', 'date', 'p')!= "29 avril 2015"
+      +e('summary', 'text', 'p')!= "Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum."
