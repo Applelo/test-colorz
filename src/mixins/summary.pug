@@ -3,7 +3,7 @@ mixin summary(img, md)
     +e('summary', 'img-container')
       +e('summary', 'img', 'img')(src=img)
     +e('summary', 'content')
-      +e('summary', 'top')
+      +e('summary', 'top', 'a')(href='#')
         +e('summary', 'cat', 'p')!= "Design"
         +e('summary', 'title', 'h2')!= "Venenatis Ullamcorper"
         +e('summary', 'date', 'p')!= "29 avril 2015"

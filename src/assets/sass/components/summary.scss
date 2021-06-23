@@ -32,7 +32,29 @@
   }
 
   @include e('top') {
+    display: block;
     margin: $gutter 0 12px;
+
+    @include bp('lg') {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 26px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: {
+          image: url('./../img/svg/arrow.svg');
+          position: center;
+          size: contain;
+          repeat: no-repeat;
+        }
+      }
+    }
   }
 
   @include e('cat') {
